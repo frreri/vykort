@@ -1,4 +1,8 @@
-'use strict';
+import { joke } from './randomJoke.js';
+
+joke().then(j => {
+  document.getElementById('joke-text').textContent = j;
+});
 
 const randomNum = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
